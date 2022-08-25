@@ -14,16 +14,9 @@ import { map, Observable, timer } from 'rxjs';
     <ng-template #loading>
       <h2>Загрузочка...</h2>
     </ng-template>
-
-
-    <h1 *ngIf="omg">{{ omg }}</h1>
-    <h1 *ngIf="loading">Загрузочка...</h1>
-
   `,
 })
 export class AsyncComponent {
-
-  omg;
 
   error = false;
   zero = false;
