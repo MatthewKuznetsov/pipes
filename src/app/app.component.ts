@@ -9,7 +9,6 @@ import { of } from 'rxjs';
 export class AppComponent {
   loading = true;
   omg = '';
-
   constructor(_cdr: ChangeDetectorRef) {
     of('OMG!')
       .subscribe({
