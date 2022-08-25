@@ -1,5 +1,5 @@
 import { ChangeDetectorRef, Component } from '@angular/core';
-import { of } from 'rxjs';
+import { map, of, timer } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +10,8 @@ export class AppComponent {
   loading = true;
   omg = '';
   constructor(_cdr: ChangeDetectorRef) {
-    of('OMG!')
+    timer(3000)
+      .pipe(map(() => 'OMG!'))
       .subscribe({
         next: (e) => {
           this.omg = e;
